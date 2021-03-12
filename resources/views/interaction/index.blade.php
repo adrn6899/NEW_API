@@ -24,8 +24,7 @@
 	
     <div class="container">
         <h5>
-            {{-- Brand Name: <span  name="brand_name" /> --}}
-            <input type="text" name="" id="result-branded">
+            Brand Name: <span id="result-branded" name="brand_name" />
         </h5>
         <h5>
             Generic Name: <span id="result-generic" name="generic_name"/>
