@@ -20,7 +20,9 @@ Route::get('/', function () {
 // Route::resource('Openfda','OpenfdaController');
 Route::get('/openfda','OpenfdaController@index');
 Route::get('/rx','RxController@index');
+// Route::resource('rx','RXController');
+Route::get('/rx/save','RxController@drugStore')->name('rx.save');
 // Route::get('/interaction','InteractionController@index');
 Route::post('/interaction','InteractionController@index');
 
-Route::resource('rx','RXController');
+

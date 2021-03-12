@@ -36,21 +36,28 @@ class RxController extends Controller
      */
     public function store(Request $request)
     {
+
+    }
+
+    public function drugStore(Request $request)
+    {
         //
-        dd($request);
-        // $rx = New rx;
-        // $rx->Brand_Name = $request->input('brand_name');
-        // $rx->Generic_Name = $request->input('generic_name');
-        // $rx->Description = $request->input('description');
-        // $rx->Ask_Doctor = $request->input('ask_doctor');
-        // $rx->Dosage = $request->input('dosage');
-        // $rx->Pregnant = $request->input('pregnant');
-        // $rx->Is_Branded = $request->input('is_branded');
-        // $rx->Medicine_Name = $request->input('medicine_name');
-        // $rx->RXCUI_ID = $request->input('rxcui_id');
-        // $rx->rx = $request->input('interaction');
-        // $rx->Severity = $request->input('severity');
-        // // $rx->save();
+        //dd([$request, $request->input('brand'), $request->get('brand'), request()->brand]);
+        $rx = New rx;
+        $rx->Brand_Name = $request->input('brand');
+        $rx->Generic_Name = $request->input('gener');
+        $rx->Description = $request->input('descrip');
+        $rx->Ask_Doctor = $request->input('askdoc');
+        $rx->Dosage = $request->input('dose');
+        $rx->Pregnant = $request->input('pregg');
+        $rx->Is_Branded = $request->input('isbran');
+        $rx->Medicine_Name = $request->input('mdname');
+        $rx->RXCUI_ID = $request->input('rxid');
+        $rx->Interaction = $request->input('inter');
+        $rx->Severity = $request->input('seve');
+        $rx->save();
+
+
         // dd($rx);
     }
 

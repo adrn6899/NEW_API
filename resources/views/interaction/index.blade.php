@@ -19,7 +19,7 @@
   <li><a href="{{ url('interaction') }}">Interaction</a></li>
 </ul>
     </div>
-    <form action='rx' method="POST" >
+    <form action='#' method="GET" ></form>
     @csrf
 	
     <div class="container">
@@ -61,8 +61,8 @@
         
     </div>
     
-    <button type="Submit" class="btn btn-success">Save</button>
-    </form>
-    <script src="js/getall.js"></script> 
+        <button type="Submit" class="btn btn-success" id="fetch_all">Save</button>
+    </form> 
+   <script src="js/getall.js"></script> -
 </body>
 </html>
