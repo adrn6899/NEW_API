@@ -37,7 +37,7 @@ class RxController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->input('brand_name'));
+        dd($request);
         // $rx = New rx;
         // $rx->Brand_Name = $request->input('brand_name');
         // $rx->Generic_Name = $request->input('generic_name');
