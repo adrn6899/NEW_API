@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\rx;
+use DB;
+use App\dashboard;
 use App\Interaction;
 use Illuminate\Http\Request;
-use Redirect;
+use Illuminate\Support\Facades\view;
 
-class RxController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,11 @@ class RxController extends Controller
     public function index()
     {
         //
-        return view('rx.index');
+        $interactions = DB::table("interaction")->get()->all();
+        // dd($interactions);
+        return view('dashboard.index',compact('interactions'));
+
+        
     }
 
     /**
@@ -38,40 +42,16 @@ class RxController extends Controller
      */
     public function store(Request $request)
     {
-
-    }
-
-    public function drugStore(Request $request)
-    {
         //
-        //dd([$request, $request->input('brand'), $request->get('brand'), request()->brand]);
-        $rx = New rx;
-        $rx->Brand_Name = $request->input('brand');
-        $rx->Generic_Name = $request->input('gener');
-        $rx->Description = $request->input('descrip');
-        $rx->Ask_Doctor = $request->input('askdoc');
-        $rx->Dosage = $request->input('dose');
-        $rx->Pregnant = $request->input('pregg');
-        $rx->Is_Branded = $request->input('isbran');
-        $rx->Medicine_Name = $request->input('mdname');
-        $rx->RXCUI_ID = $request->input('rxid');
-        $rx->Interaction = $request->input('inter');
-        $rx->Severity = $request->input('seve');
-        $rx->save();
-
-        return Redirect::to('dashboard')->with('success','New Data Added');
-
-
-        // dd($rx);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\rx  $rx
+     * @param  \App\dashboard  $dashboard
      * @return \Illuminate\Http\Response
      */
-    public function show(rx $rx)
+    public function show(dashboard $dashboard)
     {
         //
     }
@@ -79,10 +59,10 @@ class RxController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\rx  $rx
+     * @param  \App\dashboard  $dashboard
      * @return \Illuminate\Http\Response
      */
-    public function edit(rx $rx)
+    public function edit(dashboard $dashboard)
     {
         //
     }
@@ -91,10 +71,10 @@ class RxController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\rx  $rx
+     * @param  \App\dashboard  $dashboard
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rx $rx)
+    public function update(Request $request, dashboard $dashboard)
     {
         //
     }
@@ -102,10 +82,10 @@ class RxController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\rx  $rx
+     * @param  \App\dashboard  $dashboard
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rx $rx)
+    public function destroy(dashboard $dashboard)
     {
         //
     }

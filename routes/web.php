@@ -14,15 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('API1.index');
 });
 
 // Route::resource('Openfda','OpenfdaController');
 Route::get('/openfda','OpenfdaController@index');
+Route::get('/dashboard','DashboardController@index');
 Route::get('/rx','RxController@index');
 // Route::resource('rx','RXController');
 Route::get('/rx/save','RxController@drugStore')->name('rx.save');
 // Route::get('/interaction','InteractionController@index');
 Route::post('/interaction','InteractionController@index');
+
+Route::get('/API1','API1Controller@index');
+Route::get('/API2','API2Controller@index');
+Route::get('/API3','API3Controller@index');
 
 
