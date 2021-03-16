@@ -24,7 +24,7 @@ Route::get('/rx','RxController@index');
 // Route::resource('rx','RXController');
 Route::get('/rx/save','RxController@drugStore')->name('rx.save');
 // Route::get('/interaction','InteractionController@index');
-Route::post('/interaction','InteractionController@index');
+Route::get('/interaction','InteractionController@index');
 
 Route::get('/API1','API1Controller@index');
 Route::get('/API2','API2Controller@index');
