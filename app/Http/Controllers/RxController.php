@@ -18,6 +18,14 @@ class RxController extends Controller
         return view('rx.index');
     }
 
+    public function showAll()
+    {
+        $result = rx::all();
+
+        // dd($result);
+        return view('medicine')->with('medicines', $result);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

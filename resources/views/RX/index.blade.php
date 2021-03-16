@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>RxNorm</title>
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-	<!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<div class="navbar">
-        <ul>
-  <!-- <li><a href="index.html">Home</a></li> -->
-  <li><a href="{{ url('openfda') }}">Home</a></li>
-  <li><a href="{{ url('rx') }}">Rx</a></li>
-  <li><a href="{{ url('interaction') }}">Interaction</a></li>
-</ul>
-    </div>
-	<div class="container">
-		
-		<input type="text" name="rxc" id="rxc">
-		<button id="fetch">Fetch</button>
-		<div class="row" id="main">
-			
+@extends('welcome')
+@section('content')
+<div style="width:80%;padding:16px;">
+    <h1>RX NORM DRUGS RESOURCE</h1>
+    <h6><i>Web service for accessing the current RxNorm data set</i></h6>
+    <form action="#" method="POST">
+		<label style="padding:5px;">Medicine</label>
+		<div class="form-row">
+			<input type="text" name="rxc" id="rxc"  style="width:80%;" class="form-control" placeholder="Search for medicine/drug">
+			<button id="fetch2" class="btn btn-success">Fetch</button>
 		</div>
-	</div>
-	<script src="js/Rx.js"></script>
-</body>
-</html>
+	</form>
+	    <div class="form-row" style="padding:20px;">
+        <p>To submit for database purpose</p>
+        <button type="submit" class="btn-secondary" onclick="handleSubmit()">Save</button>
+    </div>
+	<div class="row" id="main" style="padding:20px;"></div>
+</div>
+	<script src="{{asset('js/Rx.js')}}"></script>
+	<script src="{{asset('js/rxsession.js')}}"></script>
+@endsection

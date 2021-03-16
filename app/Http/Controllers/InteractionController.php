@@ -18,6 +18,12 @@ class InteractionController extends Controller
         return view('interaction.index');
     }
 
+    public function indexInteraction()
+    {
+        //
+        return view('searchInteraction');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

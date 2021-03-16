@@ -25,4 +25,11 @@ Route::get('/rx/save','RxController@drugStore')->name('rx.save');
 // Route::get('/interaction','InteractionController@index');
 Route::post('/interaction','InteractionController@index');
 
+Route::get('/openFDA/index','OpenfdaController@index')->name('open.fda.index');
+Route::get('/rxnorm/index','RxController@index')->name('rx.norm.index');
+Route::get('/medicines','RxController@showAll')->name('medicines.index');
+Route::get('/drug/interactions','InteractionController@index')->name('drug.interactions');
+Route::get('/interactions','InteractionController@indexInteraction')->name('interaction.index');
+
+
 
