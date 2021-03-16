@@ -23,16 +23,19 @@
     </div> --}}
 @csrf
     <div class="container" style="width: auto">
-<div id="center">
+        <div id="center">
             <label>RX</label>
             <input type="text" name="rxc" id="rxc">
             <button id="fetch2" class="btn btn-success">Fetch</button>
             <div class="row" id="main-center" style="width: 300px; ">
                 
             </div>
+            <button type="submit" onclick="handleSubmit()"><a href="API3">COPY DETAILS</a></button>
         </div>
-</div>
-    <input type="submit" onclick="handleSubmit()"/>
+        
+    </div>
+    {{-- <input type="submit" onclick="handleSubmit()"/> --}}
+     
     <script type="text/javascript">
         $(document).ready(function(){
 

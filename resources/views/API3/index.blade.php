@@ -23,21 +23,21 @@
     </div> --}}
     
 
-            <div class="container" style="width: auto">
-        <div id="right">
-                    <div>
-                        <label>Interaction</label>
-                        <input type="text" name="medicine1" id="medicine1"> +
-                        <input type="text" name="medicine2" id="medicine2">
-                        <button id="fetch3" class="btn btn-success">Search</button>
-                    </div>
-                    <div class="row" id="main-right" style="width: 300px; ">
-
-                    </div>
+        <div class="container" style="width: auto">
+            <div id="right">
+                <div>
+                    <label>Interaction</label>
+                    <input type="text" name="medicine1" id="medicine1"> +
+                    <input type="text" name="medicine2" id="medicine2">
+                    <button id="fetch3" class="btn btn-success">Search</button>
                 </div>
+                <div class="row" id="main-right" style="width: 300px; ">
+
+                </div>
+            </div>
         </div>
             {{-- <input type="submit" onclick="handleSubmit()" /> --}}
-            <button type="submit" onclick="handleSubmit()"><a href="interaction">Submit</a></button>
+        <button type="submit" onclick="handleSubmit()"><a href="interaction">COPY DETAILS</a></button>
 
     <script type="text/javascript">
         

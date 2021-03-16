@@ -32,9 +32,12 @@
             </div>
             <div class="row" id="main-left" style="width: 350px; ">
 
-            </div> 
+            </div>
+            <button type="submit" onclick="handleSubmit()"><a href="API2">COPY DETAILS</a></button> 
         </div>
-<input type="submit" onclick="handleSubmit()"/>
+{{-- <input type="submit" onclick="handleSubmit()"/> --}}
+        {{-- <button type="submit" onclick="handleSubmit()"><a href="API2">COPY DETAILS</a></button> --}}
+    </div>
 {{-- </form> --}}
     {{-- <script src="js/index.js"></script>
     <script src="js/copyall.js"></script>
